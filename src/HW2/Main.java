@@ -1,45 +1,18 @@
 package HW2;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
-        boolean pineapple = true;
-        int animal;
-        int action;
-        Random random = new Random();
-        //int wait = 1000;
-        Cat cat = new Cat("Tom");
-        Eagle eagle = new Eagle("Innokenty");
-        Turtle turtle = new Turtle("Natasha");
-        Duck duck = new Duck(" ");
-
-        System.out.println(cat.name);
-
-        while (pineapple){
-            //Thread.sleep(wait);
-            animal = random.nextInt(4);
-            action = random.nextInt(3);
-            if (animal == 0) {
-                if (action == 0) {cat.fly();}
-                if (action == 1) {cat.walk();}
-                if (action == 2) {cat.swim();}
-            }
-            if (animal == 1) {
-                if (action == 0) {eagle.fly();}
-                if (action == 1) {eagle.walk();}
-                if (action == 2) {eagle.swim();}
-            }
-            if (animal == 2) {
-                if (action == 0) {turtle.fly();}
-                if (action == 1) {turtle.walk();}
-                if (action == 2) {turtle.swim();}
-            }
-            if (animal == 3) {
-                if (action == 0) {duck.fly();}
-                if (action == 1) {duck.walk();}
-                if (action == 2) {duck.swim();}
-            }
-        }
+        Cat cat = new Cat("Tom", "fleas");
+        Eagle eagle = new Eagle("Innokenty", "broken wing");
+        Turtle turtle = new Turtle("Natasha", "none, planned checkup");
+        Duck duck = new Duck("NONE", "drunk");
+        VetClinic vetClinic = new VetClinic();
+        Doctor doctor = new Doctor();
+        vetClinic.addpatients(cat, eagle, turtle, duck);
+        System.out.println(vetClinic.getPatients());
+        System.out.println(vetClinic.getgoables());
+        System.out.println(vetClinic.getswimmables());
+        System.out.println(vetClinic.getflyables());
+        System.out.println(doctor.DoCheckup());
     }
 }

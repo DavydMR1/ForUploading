@@ -1,19 +1,17 @@
 package HW2;
 
-public class Cat extends Animal {
-    public Cat(String name) {
-        super(name);
+public class Cat extends Animal implements Goable {
+    public Cat(String name, String illness) {
+        super(name, illness);
     }
 
     @Override
-    public void fly() {
-        System.out.printf("%s can't fly\n", type);
+    public double run() {
+        return 20;
     }
 
     @Override
-    public void swim() {
-        System.out.println("Cats are afraid of water\n");
+    public double Acceleration() {
+        return Goable.super.Acceleration();
     }
-
-
 }
