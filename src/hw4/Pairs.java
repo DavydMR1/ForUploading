@@ -13,23 +13,11 @@ public class Pairs {
         }
     }
 
-    public String combine() {
-        StringBuilder builder = new StringBuilder();
-        for (Object i : objects) {
-            builder.append(i).append(" ");
-        }
-        builder.deleteCharAt(builder.length() - 1);
-        return builder.toString();
+    public String getFirst(int id) {
+        return String.valueOf(keys[id]);
     }
 
-        public Integer combineNumbers() {
-        Integer a = 0;
-        for (Object i : objects) {
-            try {
-                a += Integer.parseInt(i.toString());
-            }
-            catch (NumberFormatException ignored) {}
-        }
-        return a;
+    public String getLast(int id) {
+        return String.valueOf(objects[id]);
     }
 }
