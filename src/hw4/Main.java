@@ -6,7 +6,7 @@ public class Main {
         String b = "banana";
         int c = 105;
         Pairs pairs = new Pairs(new Object[]{a, b, c});
-        System.out.println(pairs.combine());
-        System.out.println(pairs.combineNumbers());
+        System.out.println(pairs.getFirst(1));
+        System.out.println(pairs.getLast(2));
     }
 }
